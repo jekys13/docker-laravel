@@ -20,6 +20,8 @@ RUN apk add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data
 
 WORKDIR /var/www/app
 
+CMD composer install
+
 CMD php artisan key:generate
 CMD php artisan migrate
 CMD php artisan db:seed
